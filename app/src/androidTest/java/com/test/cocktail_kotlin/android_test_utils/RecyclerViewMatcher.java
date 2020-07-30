@@ -1,4 +1,4 @@
-package com.test.cocktail_kotlin;
+package com.test.cocktail_kotlin.android_test_utils;
 
 
 import android.content.res.Resources;

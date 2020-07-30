@@ -1,4 +1,4 @@
-package com.test.cocktail_kotlin;
+package com.test.cocktail_kotlin.android_test_utils;
 
 import android.view.View;
 
@@ -16,7 +16,7 @@ import org.hamcrest.Matchers;
 /**
  * Created by dannyroa on 5/9/15.
  */
-public class TestUtils {
+public class RecyclerViewTestUtils {
 
     public static <VH extends RecyclerView.ViewHolder> ViewAction actionOnItemViewAtPosition(int position,
                                                                                              @IdRes

@@ -1,6 +1,5 @@
-package com.test.cocktail_kotlin
+package com.test.cocktail_kotlin.ui
 
-import androidx.test.core.app.ActivityScenario
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.Espresso.pressBack
 import androidx.test.espresso.action.ViewActions.click
@@ -10,6 +9,8 @@ import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner
+import com.test.cocktail_kotlin.MainActivity
+import com.test.cocktail_kotlin.R
 import com.test.cocktail_kotlin.adapter.CocktailViewHolder
 import org.junit.Rule
 import org.junit.Test

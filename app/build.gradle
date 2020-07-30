@@ -33,6 +33,12 @@ android {
 
     }
 
+    sourceSets {
+        // give androidTest access to unit test's test utils.
+        androidTest.java.srcDirs += "src/test/java/com/test/cocktail_kotlin/common_test_utils"
+        test.java.srcDirs += "src/test/java/com/test/cocktail_kotlin/common_test_utils"
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -91,13 +97,19 @@ dependencies {
     implementation 'com.jakewharton.timber:timber:4.7.1'
 
 
-    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.2.0'
-    androidTestImplementation "io.mockk:mockk-android:1.10.0"
+    androidTestImplementation "androidx.arch.core:core-testing:2.1.0"
     debugImplementation "androidx.fragment:fragment-testing:1.2.5"
     debugImplementation "androidx.fragment:fragment-ktx:1.2.5"
+
+    //JUnit5 for unit tests
+    testImplementation "io.mockk:mockk:1.10.0"
+    testImplementation "org.junit.jupiter:junit-jupiter-api:5.6.2"
+    testImplementation "org.junit.jupiter:junit-jupiter-params:5.6.2"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.6.2"
 
 
     // Room dependency
